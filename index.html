@@ -1,59 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./src/main.css" />
-    <title>Gama Academy - Calculadora de churrasco</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./src/main.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+
+  <title>Gama Academy - Calculadora de churrasco</title>
+</head>
+
+<body style="background-color: #763cb7;">
+  <section class="bd-color">
     <header>
-      <h5>GAMA ACADEMY</h5>
-      <h2>Calculadora de Churrasco</h2>
+      <img class="logo" src="logo.png" alt="GAMA ACADEMY">
+      <h2 class="title-app">Calculadora de Churrasco</h2>
     </header>
 
     <div>
-      <label for="mulheres-qnt">Mulheres</label>
-      <input id="mulheres-qnt" type="text" />
+      <div class="food-line row">
 
-      <label for="homens-qnt">Homens</label>
-      <input id="homens-qnt" type="text" />
+        <di class="col-div-text"><h4 class="line-title">Comidas</h4></di>
 
-      <label for="criancas-qnt">Crianças</label>
-      <input id="criancas-qnt" type="text" />
-      <br>
-      <label for="acompanhamentos">acompanhamentos</label>
-      <input id="acompanhamentos" type="checkbox" />
+        <div class="col-md col-div-1">
+          <input class="in-food" id="mulheres-qnt" type="text" placeholder="0" />
+          <label class="text-input" for="mulheres-qnt">Mulheres</label>
+        </div>
+
+        <div class="col-md col-div-1">
+          <input class="in-food" id="homens-qnt" type="text" placeholder="0" />
+          <label class="text-input" for="homens-qnt"> Homens</label>
+        </div>
+
+        <div class="col-md col-div-1">
+          <input class="in-food" id="criancas-qnt" type="text" placeholder="0" />
+          <label class="text-input" for="criancas-qnt">Crianças</label>
+        </div>
+      </div>
+
+      <div class="optional">
+        <label class="text-input" for="acompanhamentos">acompanhamentos</label>
+        <input id="acompanhamentos" type="checkbox" />
+      </div>
+
     </div>
-    <div>
-      <label for="bebidas-alcoolicas">Bebidas alcoolicas</label>
-      <input id="bebidas-alcoolicas" type="text" />
 
-      <label for="bebidas-nao-alcoolicas">Bebidas não alcoolicas</label>
-      <input id="bebidas-nao-alcoolicas" type="text" />
-    </div>
-    <br>
-    <button id="botaoCalcular">Calcular</button>
+    <div class="drink-line row">
+      <div class="col-div-text"><h4 class="line-title">Bebidas</h4></div>
 
-      <div>
-        <div>
-          <label for="total-carne" id="total-carne"></label>
-        </div>
-        <div>
-          <label for="total-pessoas" id="total-pessoas"></label>
-        </div>
-        <div>
-          <label for="total-acompanhamento" id="total-acompanhamento"></label>
-        </div>
-        <div>
-          <label for="total-bebidas-nao-alcoolicas" id="total-bebidas-nao-alcoolicas"></label>
-        </div>
-        <div>
-          <label for="total-bebidas-alcoolicas" id="total-bebidas-alcoolicas"></label>
-        </div>
-        <div>
+      <div class="col-md col-div-2">
+        <input class="in-drink" id="bebidas-alcoolicas" type="text" placeholder="0" />
+        <label class="text-input" for="bebidas-alcoolicas">Alcoólicas</label>
+      </div>
+
+      <div class="col-md col-div-2">
+        <input class="in-drink" id="bebidas-nao-alcoolicas" type="text" placeholder="0" />
+        <label class="text-input col-md-6" for="bebidas-nao-alcoolicas">Não alcoólicas</label>
+      </div>
+      <div class="col-md col-div-2">
       </div>
     </div>
-    <script src="./src/main.js"></script>
-  </body>
+
+    <div class="btn-calc-div">
+      <button type="button" class="btn-calc" id="botaoCalcular">Calcular</button>
+    </div>
+
+    <div class="footer row">
+
+      <div class="result">
+        <div>
+          <label class="text-input" for="total-pessoas">Total de pessoas:</label>
+          <label class="text-input" for="total-pessoas" id="total-pessoas"></label>
+        </div>
+        <div>
+          <label class="text-input" for="total-carne">Total de carne:</label>
+          <label class="text-input" for="total-carne" id="total-carne"></label>
+        </div>
+        <div>
+          <label class="text-input" for="total-acompanhamento">Acompanhamentos:</label>
+          <label class="text-input" for="total-acompanhamento" id="total-acompanhamento"></label>
+        </div>
+      </div>
+
+      <div class="result">
+        <div>
+          <label class="text-input" for="total-bebidas-nao-alcoolicas">Bebidas não alcoólicas:</label>
+          <label class="text-input" for="total-bebidas-nao-alcoolicas" id="total-bebidas-nao-alcoolicas"></label>
+        </div>
+        <div>
+          <label class="text-input" for="total-bebidas-nao-alcoolicas">Bebidas alcoólicas:</label>
+          <label class="text-input" for="total-bebidas-alcoolicas" id="total-bebidas-alcoolicas"></label>
+        </div>
+        <div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script src="./src/main.js"></script>
+
+  <!-- jQuery, Popper.js, Bootstrap JS -->
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+
 </html>
